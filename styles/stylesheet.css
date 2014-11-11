@@ -1,0 +1,65 @@
+* {margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+body {margin: 1rem; }
+p {margin-bottom: 1rem;}
+h1, h2, h3, h4, h5, h6, header p, nav li a { text-transform: uppercase;}
+
+header section { background-color: rgb(194,222,93); padding: 1rem 1rem 3rem 1rem;}
+header p { margin: 0;}
+
+nav ul {list-style: none; padding: 0; margin: 0;}
+
+nav a {text-decoration: none; }
+
+header nav li {display: inline-block; padding: .5rem 2.1rem;}
+header nav a { color: black;}
+
+#main {min-height: 30rem; display: flex; }
+
+#main #side {float: left; width: 30%; min-height: 100%; display: flex; flex-direction: column; }
+#main #content {float: left; max-width: 70%; display: flex; flex-direction: column;}
+#main {overflow: auto;}
+
+#main nav, #main aside { margin-right: 1rem; }
+#main aside { flex: 1; }
+#main nav {background-color: rgb(93,223,221); }
+#main aside {background-color: rgb(93,193,223); margin-top: 1rem; }
+#side nav ul {margin-top: 3rem; margin-bottom: 3rem;}
+#side nav li, #side nav a { color: white; text-align: left; padding: .5rem; margin-left: 2rem; }
+
+#main #content h2 {background-color: rgb(224,216,94); color: white; padding: 1rem 1rem 1rem 3rem; margin-bottom: 3rem;}
+#main #content p { margin-left: 3rem; margin-right: 2rem;}
+
+#main #content article { flex: 1;}
+
+#main #content footer, footer { background-color: rgb(176,178,179); position: relative; bottom: 0px;}
+
+/* this makes me want to cry */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+/* end clearfix */
+
