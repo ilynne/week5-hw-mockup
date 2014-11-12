@@ -14,25 +14,57 @@ nav a {text-decoration: none; }
 header nav li {display: inline-block; padding: .5rem 2.1rem;}
 header nav a { color: black;}
 
-#main {min-height: 30rem; display: flex; }
+/*#main {min-height: 30rem; display: flex; }*/
 
-#main #side {float: left; width: 30%; min-height: 100%; display: flex; flex-direction: column; }
-#main #content {float: left; max-width: 70%; display: flex; flex-direction: column;}
-#main {overflow: auto;}
+#main {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row;
+}
+
+#main #side {float: left; width: 30%; background-color: yellow; }
+
+
+#main #side {
+    /*-webkit-box-flex: 1;      *//* OLD - iOS 6-, Safari 3.1-6 */
+    /*-moz-box-flex: 1;         *//* OLD - Firefox 19- */
+    /*height: 20%;               *//* For old syntax, otherwise collapses. */
+    /*-webkit-flex: 1;          *//* Chrome */
+    /*-ms-flex: 1;              *//* IE 10 */
+    /*flex: 1;                  *//* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: flex;
+    flex-direction: column;
+}
+
+#main #content {float: left; max-width: 70%; }
+/*#main {overflow: auto;}*/
 
 #main nav, #main aside { margin-right: 1rem; }
 #main aside { flex: 1; }
+
+#main nav, #main aside {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    height: 20%;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
 #main nav {background-color: rgb(93,223,221); }
 #main aside {background-color: rgb(93,193,223); margin-top: 1rem; }
-#side nav ul {margin-top: 3rem; margin-bottom: 3rem;}
+#side nav ul {margin-top: 0; margin-bottom: 3rem;}
 #side nav li, #side nav a { color: white; text-align: left; padding: .5rem; margin-left: 2rem; }
+#side nav li:first-of-type {padding-top: 3rem;}
 
 #main #content h2 {background-color: rgb(224,216,94); color: white; padding: 1rem 1rem 1rem 3rem; margin-bottom: 3rem;}
 #main #content p { margin-left: 3rem; margin-right: 2rem;}
 
 #main #content article { flex: 1;}
 
-#main #content footer, footer { background-color: rgb(176,178,179); position: relative; bottom: 0px;}
+#main #content footer, footer { background-color: rgb(176,178,179); position: relative; bottom: 0px; margin-top: 3rem;}
 
 /* this makes me want to cry */
 /**
