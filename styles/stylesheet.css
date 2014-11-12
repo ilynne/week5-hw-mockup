@@ -20,7 +20,6 @@ nav a {text-decoration: none; }
 header nav li {display: inline-block; padding: .5rem 2.1rem; font-size: 1.1rem;}
 header nav a { color: black;}
 
-/*#main {min-height: 30rem; display: flex; }*/
 
 #main {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -55,6 +54,7 @@ header nav a { color: black;}
     -ms-flex: 1;              /* IE 10 */
     flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
+
 #main nav {background-color: rgb(93,223,221); }
 #main aside {background-color: rgb(93,193,223); margin-top: 1rem; }
 #side nav ul {padding-top: 3rem; padding-bottom: 2rem; padding-left: 2rem;}
@@ -81,33 +81,4 @@ header nav a { color: black;}
     font-size: 50%;
 }
 #main #content footer i.fa-inverse {color: rgb(176,178,179); }
-
-/* this makes me want to cry */
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-    *zoom: 1;
-}
-/* end clearfix */
 
